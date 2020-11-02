@@ -181,7 +181,7 @@ export const RecipePage = (backgroundImage, imageOne, imageTwo, recipe) => {
             {theme.direction === 'ltr' ? <ChevronLeftIcon style={{ fontSize: "2em" }} /> : <ChevronRightIcon style={{ fontSize: "2em" }} />}
           </IconButton>
         </div>
-        <ListItem button key={'Home'} component="a" backgroundColor='transparent' classes={{ fontSize: 80 }} href="/" >
+        <ListItem button key={'Home'} component="a" backgroundColor='transparent' classes={{ fontSize: 80 }} href={process.env.PUBLIC_URL + '/'} >
           <ListItemText primary={'Home'} classes={{ primary: classes.listItemText }} />
         </ListItem>
       </Drawer>

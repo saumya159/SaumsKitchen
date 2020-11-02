@@ -5,6 +5,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridPhotos from './GridPhotos';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import {GridImage} from './GridImage';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,9 +48,9 @@ const ImageGridList = props => {
       <GridList cellHeight={500} className={classes.gridList} cols={getGridListCols()} spacing={20}>
         {GridPhotos.map((tile) => (
           <GridListTile key={tile.img} cols={tile.cols < getGridListCols() ? tile.cols : 1}>
-            <a href={tile.href}>
+            <Link to={tile.href}>
                 {GridImage(tile.img, tile.title)}
-            </a>
+            </Link>
           </GridListTile>
         ))}
       </GridList>

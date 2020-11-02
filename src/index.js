@@ -19,20 +19,19 @@ import Roll from './pages/Roll'
 
 ReactDOM.render(
   <React.StrictMode>
-
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={theme}>
-        <Route exact path="/" component={App} />
-        <Route path="/Chai" component={Chai} />
-        <Route path="/Chicken65" component={Chicken65} />
-        <Route path="/Coffee" component={Coffee} />
-        <Route path="/Flatbreads" component={Flatbreads} />
-        <Route path="/Butterchicken" component={Butterchicken} />
-        <Route path="/Keemanaan" component={Keemanaan} />
-        <Route path="/Appleroses" component={Appleroses} />
-        <Route path="/Kpuffs" component={Kpuffs} />
-        <Route path="/Tiramisu" component={Tiramisu} />
-        <Route path="/Roll" component={Roll} />
+      <Route exact path="/" component={App} />
+      <Route exact path="/Chai" component={Chai} />
+      <Route exact path="/Chicken65" component={Chicken65} />
+      <Route exact path="/Coffee" component={Coffee} />
+      <Route exact path="/Flatbreads" component={Flatbreads} />
+      <Route exact path="/Butterchicken" component={Butterchicken} />
+      <Route exact path="/Keemanaan" component={Keemanaan} />
+      <Route exact path="/Appleroses" component={Appleroses} />
+      <Route exact path="/Kpuffs" component={Kpuffs} />
+      <Route exact path="/Tiramisu" component={Tiramisu} />
+      <Route exact path="/Roll" component={Roll} />
       </ThemeProvider>
     </Router>
 
